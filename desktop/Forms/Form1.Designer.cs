@@ -28,12 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            dgvImovel = new DataGridView();
+            id = new DataGridViewTextBoxColumn();
+            city = new DataGridViewTextBoxColumn();
+            district = new DataGridViewTextBoxColumn();
+            dormitory = new DataGridViewTextBoxColumn();
+            room = new DataGridViewTextBoxColumn();
+            wc = new DataGridViewTextBoxColumn();
+            parking = new DataGridViewTextBoxColumn();
+            type = new DataGridViewTextBoxColumn();
+            btnAdd = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvImovel).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvImovel
+            // 
+            dgvImovel.AllowUserToAddRows = false;
+            dgvImovel.AllowUserToDeleteRows = false;
+            dgvImovel.AllowUserToResizeColumns = false;
+            dgvImovel.AllowUserToResizeRows = false;
+            dgvImovel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvImovel.Columns.AddRange(new DataGridViewColumn[] { id, city, district, dormitory, room, wc, parking, type });
+            dgvImovel.Location = new Point(53, 11);
+            dgvImovel.Margin = new Padding(2);
+            dgvImovel.MultiSelect = false;
+            dgvImovel.Name = "dgvImovel";
+            dgvImovel.ReadOnly = true;
+            dgvImovel.RowHeadersVisible = false;
+            dgvImovel.RowHeadersWidth = 62;
+            dgvImovel.RowTemplate.Height = 25;
+            dgvImovel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvImovel.Size = new Size(854, 332);
+            dgvImovel.TabIndex = 21;
+            // 
+            // id
+            // 
+            id.DataPropertyName = "id";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            id.DefaultCellStyle = dataGridViewCellStyle2;
+            id.HeaderText = "Identificador";
+            id.MinimumWidth = 8;
+            id.Name = "id";
+            id.ReadOnly = true;
+            id.Width = 150;
+            // 
+            // city
+            // 
+            city.DataPropertyName = "city";
+            city.HeaderText = "Cidade";
+            city.Name = "city";
+            city.ReadOnly = true;
+            // 
+            // district
+            // 
+            district.DataPropertyName = "district";
+            district.HeaderText = "Bairro";
+            district.Name = "district";
+            district.ReadOnly = true;
+            // 
+            // dormitory
+            // 
+            dormitory.DataPropertyName = "dormitory";
+            dormitory.HeaderText = "Dormitórios";
+            dormitory.Name = "dormitory";
+            dormitory.ReadOnly = true;
+            // 
+            // room
+            // 
+            room.DataPropertyName = "room";
+            room.HeaderText = "Salas";
+            room.Name = "room";
+            room.ReadOnly = true;
+            // 
+            // wc
+            // 
+            wc.DataPropertyName = "wc";
+            wc.HeaderText = "Banheiros";
+            wc.Name = "wc";
+            wc.ReadOnly = true;
+            // 
+            // parking
+            // 
+            parking.DataPropertyName = "parking";
+            parking.HeaderText = "Vagas de Garagem";
+            parking.Name = "parking";
+            parking.ReadOnly = true;
+            // 
+            // type
+            // 
+            type.DataPropertyName = "type";
+            type.HeaderText = "Tipo";
+            type.Name = "type";
+            type.ReadOnly = true;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Location = new Point(404, 368);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(137, 23);
+            btnAdd.TabIndex = 22;
+            btnAdd.Text = "Incluir / Editar";
+            btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(958, 450);
+            Controls.Add(btnAdd);
+            Controls.Add(dgvImovel);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dgvImovel).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvImovel;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn city;
+        private DataGridViewTextBoxColumn district;
+        private DataGridViewTextBoxColumn dormitory;
+        private DataGridViewTextBoxColumn room;
+        private DataGridViewTextBoxColumn wc;
+        private DataGridViewTextBoxColumn parking;
+        private DataGridViewTextBoxColumn type;
+        private Button btnAdd;
     }
 }
