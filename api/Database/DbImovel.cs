@@ -92,7 +92,7 @@ namespace api.Database
             {
                 using (NpgsqlCommand cmd = new NpgsqlCommand())
                 {
-                    cmd.CommandText = @"SELECT city, district, dormitory, room, wc, parking, type " +
+                    cmd.CommandText = @"SELECT * " +
                                       @"FROM imovel " +
                                       @"ORDER BY id;";
 

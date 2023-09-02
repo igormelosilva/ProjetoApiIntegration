@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvImovel = new DataGridView();
             id = new DataGridViewTextBoxColumn();
             city = new DataGridViewTextBoxColumn();
@@ -65,10 +65,10 @@
             // id
             // 
             id.DataPropertyName = "id";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            id.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            id.DefaultCellStyle = dataGridViewCellStyle1;
             id.HeaderText = "Identificador";
             id.MinimumWidth = 8;
             id.Name = "id";
@@ -77,49 +77,49 @@
             // 
             // city
             // 
-            city.DataPropertyName = "city";
+            city.DataPropertyName = "cidade";
             city.HeaderText = "Cidade";
             city.Name = "city";
             city.ReadOnly = true;
             // 
             // district
             // 
-            district.DataPropertyName = "district";
+            district.DataPropertyName = "bairro";
             district.HeaderText = "Bairro";
             district.Name = "district";
             district.ReadOnly = true;
             // 
             // dormitory
             // 
-            dormitory.DataPropertyName = "dormitory";
+            dormitory.DataPropertyName = "dormitorio";
             dormitory.HeaderText = "Dormitórios";
             dormitory.Name = "dormitory";
             dormitory.ReadOnly = true;
             // 
             // room
             // 
-            room.DataPropertyName = "room";
+            room.DataPropertyName = "sala";
             room.HeaderText = "Salas";
             room.Name = "room";
             room.ReadOnly = true;
             // 
             // wc
             // 
-            wc.DataPropertyName = "wc";
+            wc.DataPropertyName = "banheiro";
             wc.HeaderText = "Banheiros";
             wc.Name = "wc";
             wc.ReadOnly = true;
             // 
             // parking
             // 
-            parking.DataPropertyName = "parking";
+            parking.DataPropertyName = "vaga";
             parking.HeaderText = "Vagas de Garagem";
             parking.Name = "parking";
             parking.ReadOnly = true;
             // 
             // type
             // 
-            type.DataPropertyName = "type";
+            type.DataPropertyName = "tipo";
             type.HeaderText = "Tipo";
             type.Name = "type";
             type.ReadOnly = true;
@@ -132,6 +132,7 @@
             btnAdd.TabIndex = 22;
             btnAdd.Text = "Incluir / Editar";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // Form1
             // 
@@ -142,6 +143,7 @@
             Controls.Add(dgvImovel);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvImovel).EndInit();
             ResumeLayout(false);
         }
@@ -149,6 +151,7 @@
         #endregion
 
         private DataGridView dgvImovel;
+        private Button btnAdd;
         private DataGridViewTextBoxColumn id;
         private DataGridViewTextBoxColumn city;
         private DataGridViewTextBoxColumn district;
@@ -157,6 +160,5 @@
         private DataGridViewTextBoxColumn wc;
         private DataGridViewTextBoxColumn parking;
         private DataGridViewTextBoxColumn type;
-        private Button btnAdd;
     }
 }

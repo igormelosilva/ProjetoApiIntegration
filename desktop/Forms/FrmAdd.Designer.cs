@@ -40,8 +40,8 @@
             txtRoom = new TextBox();
             txtWc = new TextBox();
             txtParking = new TextBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            rbAluguel = new RadioButton();
+            rbVenda = new RadioButton();
             label7 = new Label();
             btnSave = new Button();
             btnCancel = new Button();
@@ -144,27 +144,27 @@
             txtParking.Size = new Size(100, 23);
             txtParking.TabIndex = 11;
             // 
-            // radioButton1
+            // rbAluguel
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Checked = true;
-            radioButton1.Location = new Point(155, 222);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(66, 19);
-            radioButton1.TabIndex = 12;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Aluguel";
-            radioButton1.UseVisualStyleBackColor = true;
+            rbAluguel.AutoSize = true;
+            rbAluguel.Checked = true;
+            rbAluguel.Location = new Point(155, 222);
+            rbAluguel.Name = "rbAluguel";
+            rbAluguel.Size = new Size(66, 19);
+            rbAluguel.TabIndex = 12;
+            rbAluguel.TabStop = true;
+            rbAluguel.Text = "Aluguel";
+            rbAluguel.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbVenda
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(155, 247);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(57, 19);
-            radioButton2.TabIndex = 13;
-            radioButton2.Text = "Venda";
-            radioButton2.UseVisualStyleBackColor = true;
+            rbVenda.AutoSize = true;
+            rbVenda.Location = new Point(155, 247);
+            rbVenda.Name = "rbVenda";
+            rbVenda.Size = new Size(57, 19);
+            rbVenda.TabIndex = 13;
+            rbVenda.Text = "Venda";
+            rbVenda.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -183,6 +183,7 @@
             btnSave.TabIndex = 16;
             btnSave.Text = "Salvar";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -201,8 +202,8 @@
             Controls.Add(btnCancel);
             Controls.Add(btnSave);
             Controls.Add(label7);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(rbVenda);
+            Controls.Add(rbAluguel);
             Controls.Add(txtParking);
             Controls.Add(txtWc);
             Controls.Add(txtRoom);
@@ -235,8 +236,8 @@
         private TextBox txtRoom;
         private TextBox txtWc;
         private TextBox txtParking;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton rbAluguel;
+        private RadioButton rbVenda;
         private Label label7;
         private Button btnSave;
         private Button btnCancel;

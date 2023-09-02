@@ -15,6 +15,8 @@ namespace desktop.Global
 
         public static Imovel tempImovel = new Imovel();
         public static bool edit = false;
+        public static Operation operation = new Operation();
+        
     }
 
     public enum Operation

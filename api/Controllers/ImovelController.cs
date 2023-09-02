@@ -20,8 +20,8 @@ namespace api.Controllers
             try
             {
                 List<Imovel> listaImovel = new List<Imovel>();
-                DbImovel consulta = new DbImovel();
-                listaImovel = consulta.GetAll();
+                DbImovel dbImovel = new DbImovel();
+                listaImovel = dbImovel.GetAll();
 
                 if (listaImovel.Count > 0)
                 {

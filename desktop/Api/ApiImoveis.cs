@@ -15,7 +15,7 @@ namespace desktop.Api
             List<Imovel> result = new List<Imovel>();
             ApiBase api = new ApiBase();
 
-            Result response = api.GetComand("imovel/GetAll");
+            Result response = api.GetComand("Imovel/GetAll");
 
             result = JsonConvert.DeserializeObject<List<Imovel>>(response.data);
 
@@ -27,7 +27,7 @@ namespace desktop.Api
             Imovel result = new Imovel();
             ApiBase api = new ApiBase();
 
-            Result response = api.GetComand("imovel/Get?id=" + id);
+            Result response = api.GetComand("Imovel/Get?id=" + id);
 
             if (result != null && response.success)
             {
@@ -37,26 +37,26 @@ namespace desktop.Api
             return result;
         }
 
-        public Result AddImovel(Imovel imovel)
+        public bool AddImovel(Imovel imovel)
         {
             ApiBase api = new ApiBase();
 
             string parameters = JsonConvert.SerializeObject(imovel);
 
-            Result result = api.PostComand("imovel/Add", parameters);
+            Result result = api.PostComand("Imovel/Add", parameters);
 
-            return result;
+            return result.success;
         }
 
-        public Result UpdateImovel(Imovel imovel)
+        public bool UpdateImovel(Imovel imovel)
         {
             ApiBase api = new ApiBase();
 
             string parameters = JsonConvert.SerializeObject(imovel);
 
-            Result result = api.PutComand("imovel/Update", parameters);
+            Result result = api.PutComand("Imovel/Update", parameters);
 
-            return result;
+            return result.success;
         }
 
         public Result DeleteImovel(int id)
